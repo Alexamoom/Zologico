@@ -1,0 +1,199 @@
+using System;
+
+/*
+Integrantes 
+Rosmaris Rondon Ci: 28.129.951
+Alexaris Luna Ci: 29.591.030
+Rodolfo Salazar ci:30.065.455
+*/
+
+class Program {
+  public static void Main (string[] args) {
+
+    Animal[] animales = new Animal[7];
+
+    Jirafa jirafita = new Jirafa();
+    animales[0] = jirafita;
+
+    Tigre tigrito = new Tigre();
+    animales[1] = tigrito;
+
+    Anaconda anaconda = new Anaconda();
+    animales[2] = anaconda;
+
+    Mono monito = new Mono();
+    animales[3] = monito;
+
+    PavoReal pavito = new PavoReal();
+    animales[4] = pavito;
+
+    Hipopotamo hipopotamo = new Hipopotamo(); 
+    animales[5] = hipopotamo;
+
+    Arana arana = new Arana();
+    animales[6] = arana;
+
+    string[] tipo = new string[]{"Tigre", "Jirafa", "Anaconda", "Mono", "Pavo Real", "Hipopotamo", "Arana"};
+
+    Console.WriteLine ("Ingrese los datos para cada animal:");
+
+    for(int i=0; i<7; i++){
+      Console.WriteLine(tipo[i]);
+      Console.WriteLine ("Nombre:");
+      animales[i].Nombre = Console.ReadLine();
+      Console.WriteLine ("Edad:");
+      animales[i].Edad = Console.ReadLine();
+      Console.WriteLine ("Peso:");
+      animales[i].Peso = Console.ReadLine();
+      Console.WriteLine ();
+
+    }
+
+    for(int i=0; i<7; i++){
+      animales[i].Comer();
+      animales[i].Banar();
+      animales[i].Dormir();
+    }
+
+  }
+}
+
+public abstract class Animal {
+
+  private string nombre;
+  private string edad;
+  private string peso;
+
+  public string Nombre{
+    get {return this.nombre;} 
+    set {nombre = value;}
+  }
+  public string Peso{
+    get {return this.peso;} 
+    set {peso = value;}
+  }
+
+  public string Edad{
+    get {return this.edad;} 
+    set { edad = value;}
+  }
+
+  public abstract void Dormir();
+
+  public abstract void Banar();
+
+  public abstract void Comer();
+}
+
+public class Tigre : Animal{
+
+  public override void Banar(){
+    Console.WriteLine(this.Nombre + " se está banando");
+  }
+
+  public override void Comer(){
+    Console.WriteLine(this.Nombre + " está comiendo");
+  }
+
+  public override void Dormir(){
+    Console.WriteLine(this.Nombre + " está durmiendo");
+  }
+
+}
+
+public class Jirafa : Animal{
+
+  public override void Banar(){
+    Console.WriteLine(this.Nombre + " se está banando");
+  }
+
+  public override void Comer(){
+    Console.WriteLine(this.Nombre + " está comiendo");
+  }
+
+  public override void Dormir(){
+    Console.WriteLine(this.Nombre + " está durmiendo");
+  }
+
+}
+
+public class Anaconda : Animal{
+
+  public override void Banar(){
+    Console.WriteLine(this.Nombre + " se está banando");
+  }
+
+  public override void Comer(){
+    Console.WriteLine(this.Nombre + " está comiendo");
+  }
+
+  public override void Dormir(){
+    Console.WriteLine(this.Nombre + " está durmiendo");
+  }
+
+}
+
+public class Mono : Animal{
+
+  public override void Banar(){
+    Console.WriteLine(this.Nombre + " se está banando");
+  }
+
+  public override void Comer(){
+    Console.WriteLine(this.Nombre + " está comiendo");
+  }
+
+  public override void Dormir(){
+    Console.WriteLine(this.Nombre + " está durmiendo");
+  }
+
+}
+
+public class PavoReal : Animal{
+
+  public override void Banar(){
+    Console.WriteLine(this.Nombre + " se está banando");
+  }
+
+  public override void Comer(){
+    Console.WriteLine(this.Nombre + " está comiendo");
+  }
+
+  public override void Dormir(){
+    Console.WriteLine(this.Nombre + " está durmiendo");
+  }
+
+}
+
+public class Hipopotamo : Animal{
+
+  public override void Banar(){
+    Console.WriteLine(this.Nombre + " se está banando");
+  }
+
+  public override void Comer(){
+    Console.WriteLine(this.Nombre + " está comiendo");
+  }
+
+  public override void Dormir(){
+    Console.WriteLine(this.Nombre + " está durmiendo");
+  }
+
+}
+
+public class Arana : Animal{
+
+  public override void Banar(){
+    Console.WriteLine(this.Nombre + " se está banando");
+  }
+
+  public override void Comer(){
+	  
+    Console.WriteLine(this.Nombre + " está comiendo");
+  }
+
+  public override void Dormir(){
+    Console.WriteLine(this.Nombre + " está durmiendo");
+  }
+
+}
